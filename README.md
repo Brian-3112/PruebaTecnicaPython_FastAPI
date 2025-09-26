@@ -1,6 +1,6 @@
 # PruebaTecnicaPython_FastAPI
 
-### 📌 SETI
+### 📌 SETI.
 **Sistema de Procesamiento de Mensajes de Chat**
 
 
