@@ -41,7 +41,7 @@ def create_message(payload: schemas.MessageIn, repo: MessageRepository = Depends
         saved = svc.process_and_store(payload) # procesa y guarda el mensaje,  puede lanzar excepciones
         return saved
     except IntegrityError:
-        raise HTTPException(status_code=status.HTTP_409_CONFLICT, detail="message ya existe")
+        raise HTTPException(status_code=status.HTTP_409_CONFLICT, detail="message_id ya existe")
     except Exception as exc:
         raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail=str(exc))
 
