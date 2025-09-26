@@ -52,7 +52,7 @@ class FakeRepo:
 def test_filter_profanity():
     svc = MessageService(FakeRepo())
     text = "Eres idiota y estúpido"
-    sanitized, has_profanity = svc._filter_profanity(text)
+    sanitized, has_profanity = svc.Filtro_Inapropiado(text)
     assert has_profanity is True
     assert "*" in sanitized
 
