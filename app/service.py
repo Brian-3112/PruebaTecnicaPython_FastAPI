@@ -11,7 +11,7 @@ from app.schemas import MessageIn
 
 
 # Lista simple de palabras "inapropiadas" para el filtro.
-inapropiadas_palabras = { "otro", "matar", "estúpido", "idiota"}  
+inapropiadas_palabras = { "otro", "matar", "estupido", "idiota", "tonto"}  
 
 #busqueda de palabras inapropiadas,  \b indica que es una palabra completa, re.IGNORECASE para que no importe mayusculas o minusculas
 Detector_inapropiadas = re.compile(
