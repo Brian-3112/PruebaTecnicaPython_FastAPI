@@ -1,5 +1,5 @@
 
-# Pydantic models (request/response). Incluye validaciones básicas.
+# Pydantic models (request/response). asegura de que lo que entra y lo que sale de la API tiene el formato correcto.
 
 from pydantic import BaseModel, field_validator, ConfigDict
 from datetime import datetime
@@ -12,14 +12,15 @@ class MessageIn(BaseModel):
     """
     message_id: str
     session_id: str
-    content: str
+    content: str   #El texto real del mensaje.
     timestamp: datetime
-    sender: Literal["user", "system"]
+    sender: Literal["user", "system"]   #Restringido: solo "user" o "system".
 
+    #validador personalizado para asegurar que ciertos campos no estén vacíos o solo espacios
     @field_validator("message_id", "session_id", "content")
     @classmethod
     def not_empty(cls, v):
-        if not v or not v.strip():
+        if not v or not v.strip(): 
             raise ValueError("El campo no puede estar vacío.")
         return v
 

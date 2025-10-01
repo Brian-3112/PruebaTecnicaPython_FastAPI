@@ -30,7 +30,7 @@ class MessageService:
         """
         Reemplaza las palabras de la lista por asteriscos y devuelve (texto_sanitizado, tiene_profanidad)
         """
-        # Detectar si hay coincidencias originales (antes de reemplazar)
+        # Busca si existe alguna palabra inapropiada en el texto (antes de reemplazar)
         has = bool(Detector_inapropiadas.search(text))
 
         # Reemplazo: la longitud de cada palabra por '*' para preservar estructura
