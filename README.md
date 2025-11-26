@@ -13,14 +13,14 @@ Al abrir el proyecto, ejecuta para instar dependencias:
 ```bash
 pip install -r requirements.txt
 ```
-Despues, Ejecutas el proyecto:
+### 🔧 2. Ejecutar Proyecto 
 
 ```bash
 uvicorn app.main:app --reload
 ```
 Puedes usar (Swagger UI), una interfaz interactiva para probar endpoints http://127.0.0.1:8000/docs/ o herramientas para probar APIs como Postman.
 
-Por ultimo, Para ejecutar el test de pruebas:
+### 🔧 3. Ejecutar el Test de Pruebas  
 
 ```bash
 python -m pytest tests/ -v
