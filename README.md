@@ -1,10 +1,30 @@
-# PruebaTecnicaPython_FastAPI
+# **PruebaTecnicaPython_FastAPI**
+## 📌 **Sistema de Procesamiento de Mensajes de Chat**
 
-### 📌 SETI.
-**Sistema de Procesamiento de Mensajes de Chat**
+Este proyecto consiste en un sistema desarrollado en **Python** con **FastAPI** para el **procesamiento de mensajes de chat**, permitiendo manejar, estructurar y validar información enviada a través de una API. Este desarrollo hace parte de una **prueba técnica** solicitada por la empresa **SETI**.
 
+---
 
-Al abrir el proyecto ejecutas el comando "pip install -r requirements.txt" para instalar dependencias, luego ejecutas  "uvicorn app.main:app --reload" para iniciar el proyecto.
+## 🚀 **Cómo Ejecutar el Proyecto**
+
+### 🔧 1. Instalar Dependencias  
+Al abrir el proyecto, ejecuta para instar dependencias:
+
+```bash
+pip install -r requirements.txt
+```
+Despues, Ejecutas el proyecto:
+
+```bash
+uvicorn app.main:app --reload
+```
 Puedes usar (Swagger UI), una interfaz interactiva para probar endpoints http://127.0.0.1:8000/docs/ o herramientas para probar APIs como Postman.
 
-Para iniciar las pruebas test ejecutas " python -m pytest tests/ -v "
+Por ultimo, Para ejecutar el test de pruebas:
+
+```bash
+python -m pytest tests/ -v
+```
+
+
+
